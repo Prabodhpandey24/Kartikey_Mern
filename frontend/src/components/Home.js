@@ -6,6 +6,7 @@ import Farming from '../img/farming.jpg';
 import Kids from '../img/kids.jpg'
 import Book from '../img/book.jpg'
 import Allactivities from './Allactivities';
+import AboutUs from './AboutUs';
 const Home = () => {
     return (
       <>
@@ -55,6 +56,7 @@ const Home = () => {
             </Carousel.Item>
         </Carousel>
         <Allactivities />
+        <AboutUs />
         </>
     )
 }

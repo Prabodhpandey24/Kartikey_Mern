@@ -75,7 +75,7 @@ a:hover{
     filter: invert(1) grayscale(-100)    !important;
 }
 .crouselImg{
-    height: 720px;
+    height: 620px;
 }
 .carousel-card{
     background-color: white;
@@ -355,4 +355,12 @@ a:hover{
     .txtarea{
         width: 100%;
     }
+}
+
+.alignJustify svg {
+    height: 2em;
+    width: 4em;
+  }
+  .aboutPara {
+    text-align: left;
 }

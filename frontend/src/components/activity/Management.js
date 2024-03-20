@@ -34,8 +34,8 @@ const Management = () => {
           {members.map((member, index) => (
             <div className={`carousel-item ${index === 0 ? 'active' : ''}`} key={index}>
               <img src={member.photo || MemberPhotoPlaceholder} className="d-block w-100" alt="Member" />
-                <h5 class="sliderText d-flex justify-content-center">{member.name}</h5>
-                <p class="sliderText d-flex justify-content-center">{member.designation}</p>
+                <h5 className="sliderText d-flex justify-content-center">{member.name}</h5>
+                <p className="sliderText d-flex justify-content-center">{member.designation}</p>
             </div>
           ))}
         </div>
