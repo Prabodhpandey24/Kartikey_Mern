@@ -5,8 +5,10 @@ import Carousel from 'react-bootstrap/Carousel';
 import Farming from '../img/farming.jpg';
 import Kids from '../img/kids.jpg'
 import Book from '../img/book.jpg'
+import Allactivities from './Allactivities';
 const Home = () => {
     return (
+      <>
         <Carousel data-bs-theme="dark">
             <Carousel.Item>
                 <img
@@ -52,6 +54,8 @@ const Home = () => {
                 </Carousel.Caption>
             </Carousel.Item>
         </Carousel>
+        <Allactivities />
+        </>
     )
 }
 
