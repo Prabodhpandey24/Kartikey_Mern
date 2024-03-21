@@ -64,7 +64,7 @@ app.get("/api/v1/objectiveData", async (req, res) => {
         res.status(500).json({ error: error.message });
     }
 });
-const PORT = process.env.PORT || 1008
+const PORT = process.env.PORT || 4000
 
 
 app.listen(PORT, () =>{

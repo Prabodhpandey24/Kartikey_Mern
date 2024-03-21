@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Header from '../Header';
 import '../../css/style.css'
 import donateImg from "../../img/donate.jpg"
+import Footer from '../footer';
 
 const Donate = () => {
     const [formData, setFormData] = useState({
@@ -82,6 +83,7 @@ const Donate = () => {
 
                 </div>
             </form>
+            <Footer></Footer>
         </div>
 
 

@@ -42,7 +42,7 @@ const Header = () => {
                         <i className="fas fa-home"></i>
                       </li>
                       <li className="nav-item">
-                        <a className="nav-link nav-link-custom" href="">Home</a>
+                        <a className="nav-link nav-link-custom" href="/">Home</a>
                       </li>
                       <li className="nav-item">
                         <a className="nav-link nav-link-custom" href="">About Us</a>

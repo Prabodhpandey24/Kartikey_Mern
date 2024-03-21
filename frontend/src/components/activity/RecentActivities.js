@@ -7,7 +7,7 @@ const RecentActivities = () => {
   useEffect(() => {
     const fetchActivities = async () => {
       try {
-        const response = await fetch('http://localhost:1008/api/v1/latestactivities');
+        const response = await fetch('http://localhost:4000/api/v1/latestactivities');
         if (!response.ok) {
           throw new Error('Failed to fetch activities');
         }
