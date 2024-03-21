@@ -48,7 +48,7 @@ const Header = () => {
                         <a className="nav-link nav-link-custom" href="">About Us</a>
                       </li>
                       <li className="nav-item">
-                        <a className="nav-link nav-link-custom" href="">Donate</a>
+                        <a className="nav-link nav-link-custom" href="/donate">Donate</a>
                       </li>
                       <li className="nav-item">
                         <a className="nav-link nav-link-custom" href="">Apply Member</a>

@@ -9,12 +9,12 @@ const Management = () => {
   useEffect(() => {
     const fetchMembers = async () => {
       try {
-        const response = await fetch('http://localhost:5000/api/v1/memberslider');
+        const response = await fetch('http://localhost:1008/api/v1/memberslider');
         if (!response.ok) {
           throw new Error('Failed to fetch members');
         }
         const data = await response.json();
-        console.log("Data", data);
+        console.log("Data from managment", data);
         setMembers(data);
       } catch (error) {
         console.error('Error fetching members:', error);
