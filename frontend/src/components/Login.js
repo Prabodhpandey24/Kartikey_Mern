@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
 import Wheat from '../img/wheat.jpeg';
 import '../css/style.css'
+import { Link, useNavigate } from 'react-router-dom';
 
 const Login = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const navigate = useNavigate();
 
     const handleLogin = async () => {
         try {
@@ -18,6 +20,7 @@ const Login = () => {
             const data = await response.json();
             if (response.ok) {
                 localStorage.setItem('userData', JSON.stringify(data));
+                navigate('/');
                 console.log("User data stored in localStorage:", data);
             } else {
                 console.error("Login failed:", data);

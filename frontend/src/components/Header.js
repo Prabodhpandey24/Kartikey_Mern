@@ -1,13 +1,15 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import Logo  from '../img/kartikeyLogo.png';
 import '../css/style.css'
 import { RxHamburgerMenu } from "react-icons/rx";
 const Header = () => {
   const userData = localStorage.getItem('userData');
+  const navigate = useNavigate();
   const isLoggedIn = userData !== null;
   const handleLogout = () => {
-    localStorage.removeItem('userData');
+    localStorage.clear();
+    navigate('/');
   }
 
   return (
