@@ -7,6 +7,8 @@ import Kids from '../img/kids.jpg'
 import Book from '../img/book.jpg'
 import Allactivities from './Allactivities';
 import AboutUs from './AboutUs';
+import Objectives from './Objectives';
+import ContactUs from './ContactUs';
 const Home = () => {
     return (
       <>
@@ -57,6 +59,8 @@ const Home = () => {
         </Carousel>
         <Allactivities />
         <AboutUs />
+        <Objectives />
+        <ContactUs />
         </>
     )
 }

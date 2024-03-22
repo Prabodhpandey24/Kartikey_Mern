@@ -1,8 +1,14 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Logo  from '../img/kartikeyLogo.png';
 import '../css/style.css'
 import { RxHamburgerMenu } from "react-icons/rx";
 const Header = () => {
+  const userData = localStorage.getItem('userData');
+  const isLoggedIn = userData !== null;
+  const handleLogout = () => {
+    localStorage.removeItem('userData');
+  }
 
   return (
     <div>
@@ -21,7 +27,7 @@ const Header = () => {
                 </a>
               </div>
               <div className="col-sm-4 justify-content-center d-flex align-items-center logoTextContainer">
-                <a href="" className="logoText">Kartikey Welfare Trust</a>
+                <Link to={'/'} className="logoText">Kartikey Welfare Trust</Link>
               </div>
               <div className="col-sm-4 justify-content-end d-flex align-items-center col-6">
                 <span id="bars" className="d-none">
@@ -42,28 +48,37 @@ const Header = () => {
                         <i className="fas fa-home"></i>
                       </li>
                       <li className="nav-item">
-                        <a className="nav-link nav-link-custom" href="/">Home</a>
+                        <Link to={'/'} className="nav-link nav-link-custom" >Home</Link>
                       </li>
                       <li className="nav-item">
-                        <a className="nav-link nav-link-custom" href="">About Us</a>
+                        <Link to={'/aboutUs'} className="nav-link nav-link-custom" >About Us</Link>
                       </li>
                       <li className="nav-item">
-                        <a className="nav-link nav-link-custom" href="/donate">Donate</a>
+                        <Link to={'/donate'} className="nav-link nav-link-custom" >Donate</Link>
                       </li>
                       <li className="nav-item">
-                        <a className="nav-link nav-link-custom" href="">Apply Member</a>
+                        <Link to={'/'} className="nav-link nav-link-custom" >Apply Member</Link>
                       </li>
                       <li className="nav-item">
-                        <a className="nav-link nav-link-custom" href="">Your Problem</a>
+                        <Link to={'/'} className="nav-link nav-link-custom" >Your Problem</Link>
                       </li>
                       <li className="nav-item">
-                        <a className="nav-link nav-link-custom" href="">Our Projects</a>
+                        <Link to={'/'} className="nav-link nav-link-custom" >Our Projects</Link>
                       </li>
                       <li className="nav-item">
-                        <a className="nav-link nav-link-custom" href="">Contact Us</a>
+                        <Link to={'/contactus'} className="nav-link nav-link-custom" >Contact Us</Link>
                       </li>
                       <li className="nav-item">
-                        <a className="nav-link nav-link-custom" href="">Login</a>
+                        {isLoggedIn ? (
+                          <Link to={'/'} className="nav-link nav-link-custom" onClick={handleLogout}>Logout</Link>
+                        ) : (
+                          <Link to={'/login'} className="nav-link nav-link-custom">Login</Link>
+                        )}
+                      </li>
+                      <li className="nav-item">
+                        {isLoggedIn ? (
+                          <Link to={'/'} className="nav-link nav-link-custom" >Admin</Link>
+                        ):null}
                       </li>
                     </ul>
                   </div>

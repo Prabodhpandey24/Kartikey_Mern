@@ -14,7 +14,6 @@ const Management = () => {
           throw new Error('Failed to fetch members');
         }
         const data = await response.json();
-        console.log("Data from managment", data);
         setMembers(data);
       } catch (error) {
         console.error('Error fetching members:', error);

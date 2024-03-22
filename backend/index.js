@@ -64,9 +64,33 @@ app.get("/api/v1/objectiveData", async (req, res) => {
         res.status(500).json({ error: error.message });
     }
 });
+
+const User = require('./modal/user.js')
+app.post("/api/v1/login", async (req, resp) => {
+    console.log(req.body);
+    const email = req.body.Email;
+    console.log("Email>>>",email);
+    const password = req.body.Password;
+    console.log("Password>>>",password);
+    if (password && email){
+        let user = await User.findOne({ 
+            Email: email, 
+            Password: password 
+        }).select("-Password");
+        console.log("userDaatatata>>>",user);
+        if(user){
+            resp.send(user);
+        } else {
+            resp.send({ result: "No user found!" });
+        }
+    } else {
+        resp.send({ result: "Invalid parameters!" });
+    }
+});
+
+
+
 const PORT = process.env.PORT || 4000
-
-
 app.listen(PORT, () =>{
 	console.log("server is running....", PORT)
 })
