@@ -14,6 +14,12 @@ const Donate = () => {
         Description: ''
     });
 
+    const [file, setFile] = useState(null);
+
+    const handleFileChange = (event) => {
+        setFile(event.target.files[0]);
+    };
+
     const handleInputChange = (e) => {
         const { name, value, files } = e.target;
         setFormData({
@@ -32,7 +38,7 @@ const Donate = () => {
         <div>
             <Header></Header>
             <div class="sliderHeading d-flex justify-content-center sliderHeadingForOthers">
-                <h4 class="sliderHeadingText ">Donate</h4>
+                <h4 class="sliderHeadingText " style={{ marginTop: 180 }}>Donate</h4>
             </div>
             <form action="/donation-submited" method="post" encType="multipart/form-data">
                 <div className="container formContainer ">
@@ -68,7 +74,7 @@ const Donate = () => {
                         <div className="borderBottomForForm my-4"></div>
                         <div className="col-md-6 formContainerFor">
                             <label htmlFor="myFile" className="formlabel">Payment Receipt Upload<sup className="sup">*</sup> :</label>
-                            <input type="file" id="myFile" name="file_donation_upi" className="" />
+                            <input type="file"  name="file_donation_upi"  onChange={handleFileChange}   accept=".jpg, .jpeg, .png, .pdf" />
                         </div>
                         <div className="borderBottomForForm my-3 pt-3"></div>
                         <div className="col-md-12 formContainerFor">
@@ -83,7 +89,6 @@ const Donate = () => {
 
                 </div>
             </form>
-            <Footer></Footer>
         </div>
 
 

@@ -55,6 +55,7 @@ a:hover{
     color: white !important;
 }
 .sliderHeadingText{
+    margin-top: 100px;
     padding: 10px 18px;
     color: white;
     border-radius: 10px;
@@ -181,7 +182,7 @@ a:hover{
 }
 .mapSection{
     border-bottom: 1px solid white;
-    margin: 20px 0;
+    margin: 80px 0;
 }
 .formContainer{
     border-radius: 10px;
@@ -281,16 +282,15 @@ a:hover{
     position: fixed;
     z-index: 99999;
     top: 0;
-    /* transition: 0.5s; */
+    transition: 0.5s;
     height: 100%;
-    display: none;
 }
 .mobileLinks:hover{
     letter-spacing: 3;
 }
-.sliderHeadingForOthers{
-    margin-top: 30vh;
-}
+/* .sliderHeadingForOthers{
+    margin-top: 17vh;
+} */
 .formContainerForLogin > input{
     padding: 5px 5px;
     width: 20vw;
@@ -363,4 +363,9 @@ a:hover{
   }
   .aboutPara {
     text-align: left;
+}
+
+#bars > svg{
+    color: white;
+    font-size: 30px;
 }

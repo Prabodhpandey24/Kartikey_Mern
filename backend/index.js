@@ -101,6 +101,22 @@ app.get("/api/v1/allMembers", async (req, res) => {
 });
 
 
+const YourProblems = require("./modal/yourProblem.js");
+app.post('/api/v1/problemForm', async (req,res)=>{
+    console.log("Request body", req.body);
+	try{
+		console.log(req.body);
+		await YourProblems.create(req.body);
+		res.redirect("/");
+	}
+	catch(e){
+		console.log(e);
+		res.redirect('/')
+	}
+});
+
+
+
 
 const PORT = process.env.PORT || 4000
 app.listen(PORT, () =>{

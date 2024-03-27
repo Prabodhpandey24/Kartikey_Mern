@@ -8,11 +8,13 @@ import AboutUs from './components/AboutUs';
 import Donate from './components/forms/donate';
 import Objectives from './components/Objectives';
 import ContactUs from './components/ContactUs';
-import Footar from './components/footer';
+import Footer from './components/footer';
 import Login from './components/Login';
 import AdminPanel from './components/AdminPanel';
 import Addevents from './components/forms/Addevents';
 import Allmembers from './components/forms/Allmembers';
+import YourProblem from './components/forms/yourProblem';
+
 function App() {
   return (
     <div className="App">
@@ -29,8 +31,9 @@ function App() {
           <Route path="/adminpanel" element={<AdminPanel />} />
           <Route path="/addevents" element={<Addevents />} />
           <Route path="/allmembers" element={<Allmembers />} />
+          <Route path="/yourProblem" element={<YourProblem />} />
         </Routes>
-        <Footar />
+       <Footer></Footer>
       </Router>
     </div>
   );

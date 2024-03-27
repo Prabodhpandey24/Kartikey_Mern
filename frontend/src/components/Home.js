@@ -9,6 +9,7 @@ import Allactivities from './Allactivities';
 import AboutUs from './AboutUs';
 import Objectives from './Objectives';
 import ContactUs from './ContactUs';
+import Footer from './footer';
 const Home = () => {
     return (
       <>
@@ -61,6 +62,7 @@ const Home = () => {
         <AboutUs />
         <Objectives />
         <ContactUs />
+        
         </>
     )
 }

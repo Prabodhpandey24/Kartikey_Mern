@@ -6,7 +6,7 @@ import Email from '../img/email.png';
 
 const ContactUs = () => {
     return (
-        <div class="contact">
+        <div class="contact py-5">
             <div class="container">
                 <div class="row">
                     <div class="sliderHeading d-flex justify-content-center sliderHeadingForOthers">

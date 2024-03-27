@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import '../css/style.css';
 import Logo from '../img/kartikeyLogo1.png';
+import Footer from './footer';
 
 const AboutUs = () => {
     const [aboutUs, setAboutUs] = useState([]);
@@ -22,7 +23,7 @@ const AboutUs = () => {
         fetchAboutUs();
     }, []);
     return (
-        <div id="aboutUs" class="py-5">
+        <div id="aboutUs" class="py-5" style={{marginTop : 150}}>
             <div class="sliderHeading d-flex justify-content-center ">
                 <h4 class="sliderHeadingText">About Us</h4>
             </div>

@@ -26,11 +26,11 @@ const Objectives = () => {
   }, []);
 
   return (
-    <div id="objective" className="py-2">
+    <div id="objective" className="py-5">
       <div className="sliderHeading d-flex justify-content-center">
         <h4 className="sliderHeadingText">Our Objective</h4>
       </div>
-      <div className="objectiveCard py-5">
+      <div className="py-5">
         <div className="container">
           <div className="row">
             {objectives.map((objective, index) => (

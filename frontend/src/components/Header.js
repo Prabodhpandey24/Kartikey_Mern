@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import Logo  from '../img/kartikeyLogo.png';
+import Logo from '../img/kartikeyLogo.png';
 import '../css/style.css'
 import { RxHamburgerMenu } from "react-icons/rx";
 const Header = () => {
@@ -11,6 +11,13 @@ const Header = () => {
     localStorage.clear();
     navigate('/');
   }
+
+  const [showNavList, setShowNavList] = useState(false);
+
+  const handleToggleNavList = () => {
+    setShowNavList(!showNavList);
+  };
+
 
   return (
     <div>
@@ -32,8 +39,8 @@ const Header = () => {
                 <Link to={'/'} className="logoText">Kartikey Welfare Trust</Link>
               </div>
               <div className="col-sm-4 justify-content-end d-flex align-items-center col-6">
-                <span id="bars" className="d-none">
-                    <RxHamburgerMenu />
+                <span id="bars" className="d-none" onClick={handleToggleNavList}>
+                  <RxHamburgerMenu />
                 </span>
               </div>
             </div>
@@ -62,7 +69,7 @@ const Header = () => {
                         <Link to={'/'} className="nav-link nav-link-custom" >Apply Member</Link>
                       </li>
                       <li className="nav-item">
-                        <Link to={'/'} className="nav-link nav-link-custom" >Your Problem</Link>
+                        <Link to={'/yourProblem'} className="nav-link nav-link-custom" >Your Problem</Link>
                       </li>
                       <li className="nav-item">
                         <Link to={'/'} className="nav-link nav-link-custom" >Our Projects</Link>
@@ -80,13 +87,13 @@ const Header = () => {
                       <li className="nav-item">
                         {isLoggedIn ? (
                           <Link to={'/adminpanel'} className="nav-link nav-link-custom" >Admin</Link>
-                        ):null}
+                        ) : null}
                       </li>
                     </ul>
                   </div>
                 </div>
               </nav>
-              <nav className="mobileView" id="mobileView">
+              {showNavList && <nav className="mobileView" id="mobileView">
                 <div className="insideMobileView">
                   <ul className="p-0">
                     <li className="d-flex justify-content-start py-1 mobileLinks">
@@ -102,7 +109,7 @@ const Header = () => {
                       <a className="nav-link nav-link-custom" href="">Apply Member</a>
                     </li>
                     <li className="d-flex justify-content-start py-1 mobileLinks">
-                      <a className="nav-link nav-link-custom" href="">Your Problem</a>
+                      <a className="nav-link nav-link-custom" href="/yourProblem">Your Problem</a>
                     </li>
                     <li className="d-flex justify-content-start py-1 mobileLinks">
                       <a className="nav-link nav-link-custom" href="">Contact Us</a>
@@ -112,7 +119,8 @@ const Header = () => {
                     </li>
                   </ul>
                 </div>
-              </nav>
+              </nav>}
+
             </div>
           </div>
         </div>
