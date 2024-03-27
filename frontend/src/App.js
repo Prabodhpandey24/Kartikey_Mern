@@ -14,6 +14,7 @@ import AdminPanel from './components/AdminPanel';
 import Addevents from './components/forms/Addevents';
 import Allmembers from './components/forms/Allmembers';
 import YourProblem from './components/forms/yourProblem';
+import OurProject from './components/ourProject';
 
 function App() {
   return (
@@ -32,6 +33,7 @@ function App() {
           <Route path="/addevents" element={<Addevents />} />
           <Route path="/allmembers" element={<Allmembers />} />
           <Route path="/yourProblem" element={<YourProblem />} />
+          <Route path="/ourProject" element={<OurProject />} />
         </Routes>
        <Footer></Footer>
       </Router>

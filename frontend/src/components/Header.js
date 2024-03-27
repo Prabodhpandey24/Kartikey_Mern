@@ -72,7 +72,7 @@ const Header = () => {
                         <Link to={'/yourProblem'} className="nav-link nav-link-custom" >Your Problem</Link>
                       </li>
                       <li className="nav-item">
-                        <Link to={'/'} className="nav-link nav-link-custom" >Our Projects</Link>
+                        <Link to={'/ourProject'} className="nav-link nav-link-custom" >Our Projects</Link>
                       </li>
                       <li className="nav-item">
                         <Link to={'/contactus'} className="nav-link nav-link-custom" >Contact Us</Link>
@@ -110,6 +110,9 @@ const Header = () => {
                     </li>
                     <li className="d-flex justify-content-start py-1 mobileLinks">
                       <a className="nav-link nav-link-custom" href="/yourProblem">Your Problem</a>
+                    </li>
+                    <li className="d-flex justify-content-start py-1 mobileLinks">
+                      <a className="nav-link nav-link-custom" href="/ourProject">Our Project</a>
                     </li>
                     <li className="d-flex justify-content-start py-1 mobileLinks">
                       <a className="nav-link nav-link-custom" href="">Contact Us</a>
