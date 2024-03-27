@@ -88,6 +88,18 @@ app.post("/api/v1/login", async (req, resp) => {
     }
 });
 
+const ApplyMember = require('./modal/ApplyMember.js');
+app.get("/api/v1/allMembers", async (req, res) => {
+    try {
+        const allMembers = await ApplyMember.find();
+        console.log("ApplyMember", allMembers);
+        res.json(allMembers); 
+    } catch (error) {
+        console.error("Error fetching all members:", error);
+        res.status(500).json({ error: "Internal server error" });
+    }
+});
+
 
 
 const PORT = process.env.PORT || 4000

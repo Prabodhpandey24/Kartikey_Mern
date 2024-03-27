@@ -10,6 +10,9 @@ import Objectives from './components/Objectives';
 import ContactUs from './components/ContactUs';
 import Footar from './components/footer';
 import Login from './components/Login';
+import AdminPanel from './components/AdminPanel';
+import Addevents from './components/forms/Addevents';
+import Allmembers from './components/forms/Allmembers';
 function App() {
   return (
     <div className="App">
@@ -23,6 +26,9 @@ function App() {
           <Route path="/objective" element={<Objectives />} />
           <Route path="/contactus" element={<ContactUs />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/adminpanel" element={<AdminPanel />} />
+          <Route path="/addevents" element={<Addevents />} />
+          <Route path="/allmembers" element={<Allmembers />} />
         </Routes>
         <Footar />
       </Router>

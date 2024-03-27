@@ -20,7 +20,7 @@ const Login = () => {
             const data = await response.json();
             if (response.ok) {
                 localStorage.setItem('userData', JSON.stringify(data));
-                navigate('/');
+                navigate('/adminpanel');
                 console.log("User data stored in localStorage:", data);
             } else {
                 console.error("Login failed:", data);

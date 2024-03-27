@@ -79,7 +79,7 @@ const Header = () => {
                       </li>
                       <li className="nav-item">
                         {isLoggedIn ? (
-                          <Link to={'/'} className="nav-link nav-link-custom" >Admin</Link>
+                          <Link to={'/adminpanel'} className="nav-link nav-link-custom" >Admin</Link>
                         ):null}
                       </li>
                     </ul>
