@@ -115,8 +115,33 @@ app.post('/api/v1/problemForm', async (req,res)=>{
 	}
 });
 
+const UpcomingEvents = require("./modal/ourProject.js");
+app.post("/api/v1/upcomingevents", async (req, res) => {
+  console.log("data>>>>>", req.body);
+  try {
+    const {imgUrl, cardTitle, Description } = req.body;
+    const newEvent = new UpcomingEvents({
+      imgUrl,
+      cardTitle,
+      Description,
+    });
+    await newEvent.save();
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ message: "Server Error" });
+  }
+});
 
-
+app.get("/api/v1/upcomingevents", async (req, res) => {
+    try {
+        const upcomingEvents = await UpcomingEvents.find();
+        console.log("UpcomingEvents", upcomingEvents);
+        res.json(upcomingEvents); 
+    } catch (error) {
+        console.error("Error fetching UpcomingEvents:", error);
+        res.status(500).json({ error: "Internal server error" });
+    }
+});
 
 const PORT = process.env.PORT || 4000
 app.listen(PORT, () =>{
